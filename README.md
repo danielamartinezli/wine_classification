@@ -23,9 +23,9 @@ For this prediction five additional datasets are going to be joined to the datas
 It would be beneficial for the wine industry because knowing before hand the class of wine they are generating could help to stimate profitability and better information about the type of wine cusomers are purchasing.
 
 ### Dataset Description
-[Datasets:](https://archive.ics.uci.edu/dataset/109/wine)
-features:  contains information regarding chemical quality of three classes of wine.
-target: dataset containing the three classes of wine.
+[Datasets:](https://archive.ics.uci.edu/dataset/109/wine)<br>
+features:  contains information regarding chemical quality of three classes of wine.<br>
+target: dataset containing the three classes of wine.<br>
 wine: final dataset generate to create some visualizations.
 
 ### Data Dictionary
@@ -44,15 +44,15 @@ Hue: The hue or shade of the wine color, often measured in degrees.<br>
 Proline: The concentration of proline, an amino acid, in the wine, which can influence taste and aging potential.
 
 ### Next Steps in the study
-- evaluate models:knn random forest, 
-- HYPERPARAMTERS
-. for knn:gridsearch, tunel model
-. two for each model
+- evaluate models:knn random forest, <br>
+- HYPERPARAMTERS<br>
+. for knn:gridsearch, tunel model<br>
+. two for each model<br>
 
-- METRICS:
-. score for accuracy
-. f1 score*
-. learning curve
+- METRICS:<br>
+. score for accuracy<br>
+. f1 score*<br>
+. learning curve<br>
 
-- Analysis
+- Analysis<br>
 . two papers
