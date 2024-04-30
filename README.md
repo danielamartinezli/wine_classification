@@ -53,6 +53,7 @@ Proline: The concentration of proline, an amino acid, in the wine, which can inf
 . score for accuracy<br>
 . f1 score*<br>
 . learning curve<br>
+. roc_curve
 
 - Analysis<br>
 . two papers
