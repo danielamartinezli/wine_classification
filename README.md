@@ -1,7 +1,7 @@
 # wine
-evaluating different model prediction to classify wine class
+Evaluating different model prediction to classify wine
 
-### Overview
+### Overview 
 With a global population growing and the challenges climate change brings, guaranteeing food security becomes a key factor for the stability of any country. Two of the dimensions of [food security](https://www.worldbank.org/en/topic/agriculture/brief/food-security-update/what-is-food-security) are: a) Physical Availability, which is determined by the level of food production, stock levels and net trade, and b) Stability: adequate access to food on a periodic basis, where adverse weather conditions, political instability, or economic factors (unemployment, rising food prices) may have an impact on the food security status. 
 
 Due to the increased amount of extreme weather events and changes in the weather conditions as a consequence of climate change, it is imperative to plan for the future based on predictions that can be established in the present.
@@ -20,40 +20,39 @@ This project aims to generate insights into how the yield production of specific
 For this prediction five additional datasets are going to be joined to the dataset containing the target. Those are agri_land, cropland, country_are and dif_temp, pesticides. All of them are for public access on [FAO](https://www.fao.org/faostat/en/#data/QCL) and [World Data Bank](https://data.worldbank.org/indicator). 
 
 ### Impact Solution
-Big variations in the food disponibility directly affect citizens, governments, national economies and international markets. So it is expected from this project:
-
-. Predict how the yield rice in India is going to be affected by weather changes in the future
+It would be beneficial for the wine industry because knowing before hand the class of wine they are generating could help to stimate profitability and better information about the type of wine cusomers are purchasing.
 
 ### Dataset Description
-
-yield_df:  pesticides and yield
-country_sup: provides information on the total area per country
-agri_land: total agricultural land in the country
-cropland:  total cultivated area per crop. 
-pesticides: herbicides, insecticides, fungicides and bactericides, fungicides for seeds, insecticides for seeds and rodenticides used per crop in each country.
-temp_soil: variation of temperature in the soil
-All these datasets were collected from [FAOSTAT](https://www.fao.org/faostat/en/#data/QCL)
+[Datasets:](https://archive.ics.uci.edu/dataset/109/wine)
+features:  contains information regarding chemical quality of three classes of wine.
+target: dataset containing the three classes of wine.
+wine: final dataset generate to create some visualizations.
 
 ### Data Dictionary
-country: The name of the country where the crop data was collected.<br>
-crop: The type of crop for which the data is recorded.<br>
-year: The year in which the crop data was collected.<br>
-yield_ton_ha: The yield of the crop in tons per hectare.<br>
-rain_mm: The amount of rainfall in millimeters during the crop-growing season.<br>
-avg_temp: The average temperature in degrees Celsius during the crop-growing season.<br>
-dif_temp: The difference in temperature (maximum - minimum) during the crop-growing season.<br>
-country_sup: The supply of agricultural inputs in the country.<br>
-agri_area: The agricultural area available for cultivation in hectares.<br>
-crop_area: The area of land specifically used for growing the crop in hectares.<br>
-fung_bac_ton_ha: The amount of fungicides and bactericides used per hectare.<br>
-herb_ton_ha: The amount of herbicides used per hectare.<br>
-insec_ton_ha: The amount of insecticides used per hectare.<br>
-rodenticides_ton_ha: The amount of rodenticides used per hectare.<br>
-fung_seed_ton_ha: The amount of fungicide-treated seeds used per hectare.<br>
-insec_seed_ton_ha: The amount of insecticide-treated seeds used per hectare.
+Alcohol: The alcohol content in the wine, typically measured in percentage by volume.<br>
+Malicacid: The concentration of malic acid in the wine, which contributes to its tartness.<br>
+Ash: The amount of ash present in the wine, which may indicate mineral content.<br>
+Alcalinity_of_ash: The measure of the alkalinity of the ash in the wine, which can affect its taste and stability.<br>
+Magnesium: The concentration of magnesium in the wine, which can influence various aspects of wine quality including taste and color.<br>
+Total_phenols: The total amount of phenolic compounds present in the wine, which contribute to its color, flavor, and antioxidant properties.<br>
+Flavanoids: The concentration of flavonoids in the wine, which are a type of phenolic compound known for their antioxidant properties and contribution to wine flavor.<br>
+Nonflavanoid_phenols: The concentration of phenolic compounds in the wine that are not flavonoids.<br>
+Proanthocyanins: The concentration of proanthocyanins in the wine, which are a subgroup of flavonoids contributing to color, taste, and antioxidant activity.<br>
+Color_intensity: The intensity of color in the wine, which can be influenced by various compounds including phenolic compounds.<br>
+Hue: The hue or shade of the wine color, often measured in degrees.<br>
+0D280_0D315_of_diluted_wines: The absorbance at 280/315 nm of diluted wines, which can provide information about the concentration of various compounds such as anthocyanins and phenolic compounds.<br>
+Proline: The concentration of proline, an amino acid, in the wine, which can influence taste and aging potential.
 
 ### Next Steps in the study
-- EDA: null, duplicated, graphs
-- split and scalled data
-- evaluate models: logistic regression, random forest, knn
-- compare models: metrics, accuracy, cross validation, learning curve. Check paper comparing the two df.
+- evaluate models:knn random forest, 
+- HYPERPARAMTERS
+. for knn:gridsearch, tunel model
+. two for each model
+
+- METRICS:
+. score for accuracy
+. f1 score*
+. learning curve
+
+- Analysis
+. two papers
