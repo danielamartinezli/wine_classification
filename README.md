@@ -44,6 +44,7 @@ Hue: The hue or shade of the wine color, often measured in degrees.<br>
 Proline: The concentration of proline, an amino acid, in the wine, which can influence taste and aging potential.
 
 ### Next Steps in the study
+- update resume
 - evaluate models:knn random forest, <br>
 - HYPERPARAMTERS<br>
 . for knn:gridsearch, tunel model<br>
