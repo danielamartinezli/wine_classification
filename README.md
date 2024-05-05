@@ -1,5 +1,5 @@
 # wine
-Evaluating different model prediction to classify wine
+Evaluating different model predictions for wine quality classification.
 
 ### Overview 
 
