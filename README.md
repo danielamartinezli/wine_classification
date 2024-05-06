@@ -27,19 +27,31 @@ target: dataset containing the three classes of wine.<br>
 wine: final dataset generate to create some visualizations.
 
 ### Data Dictionary
-Alcohol: The alcohol content in the wine, typically measured in percentage by volume.<br>
-Malicacid: The concentration of malic acid in the wine, which contributes to its tartness.<br>
-Ash: The amount of ash present in the wine, which may indicate mineral content.<br>
-Alcalinity_of_ash: The measure of the alkalinity of the ash in the wine, which can affect its taste and stability.<br>
-Magnesium: The concentration of magnesium in the wine, which can influence various aspects of wine quality including taste and color.<br>
-Total_phenols: The total amount of phenolic compounds present in the wine, which contribute to its color, flavor, and antioxidant properties.<br>
-Flavanoids: The concentration of flavonoids in the wine, which are a type of phenolic compound known for their antioxidant properties and contribution to wine flavor.<br>
-Nonflavanoid_phenols: The concentration of phenolic compounds in the wine that are not flavonoids.<br>
-Proanthocyanins: The concentration of proanthocyanins in the wine, which are a subgroup of flavonoids contributing to color, taste, and antioxidant activity.<br>
-Color_intensity: The intensity of color in the wine, which can be influenced by various compounds including phenolic compounds.<br>
-Hue: The hue or shade of the wine color, often measured in degrees.<br>
+- Alcohol: The alcohol content in the wine, typically measured in percentage by volume.<br>
+- Malicacid: The concentration of malic acid in the wine, which contributes to its tartness.<br>
+- Ash: The amount of ash present in the wine, which may indicate mineral content.<br>
+- Alcalinity_of_ash: The measure of the alkalinity of the ash in the wine, which can affect its taste and stability.<br>
+- Magnesium: The concentration of magnesium in the wine, which can influence various aspects of wine quality including taste and color.<br>
+- Total_phenols: The total amount of phenolic compounds present in the wine, which contribute to its color, flavor, and antioxidant properties.<br>
+- Flavanoids: The concentration of flavonoids in the wine, which are a type of phenolic compound known for their antioxidant properties and contribution to wine flavor.<br>
+- Nonflavanoid_phenols: The concentration of phenolic compounds in the wine that are not flavonoids.<br>
+- Proanthocyanins: The concentration of proanthocyanins in the wine, which are a subgroup of flavonoids contributing to color, taste, and antioxidant activity.<br>
+- Color_intensity: The intensity of color in the wine, which can be influenced by various compounds including phenolic compounds.<br>
+- Hue: The hue or shade of the wine color, often measured in degrees.<br>
 0D280_0D315_of_diluted_wines: The absorbance at 280/315 nm of diluted wines, which can provide information about the concentration of various compounds such as anthocyanins and phenolic compounds.<br>
-Proline: The concentration of proline, an amino acid, in the wine, which can influence taste and aging potential.
+- Proline: The concentration of proline, an amino acid, in the wine, which can influence taste and aging potential.
 
-### Next Steps in the study
-- fix table of content in notebook
+### Data Collection and Methodology
+One dataset was collected from UC Irvine. Exploratory analysis was performed, creating a binary column for classification.
+The data was balanced using upsampling, downsampling, and SMOTE. KNN, Logistic Regression, Random Forest, and AdaBoost were evaluated to train this data in combination with different scalers (MinMax, Standard, and Robust). 
+Metrics such as Accuracy Score, F1, Precision, Recall, and Learning Curve were estimated.
+
+### Limitations and Future Research
+The level of data imbalance can potentially negatively affect the evaluation metrics used to assess a model's performance. Even when the data has been balanced using SMOTE (Synthetic Minority Over-sampling Technique), which aims to address imbalanced datasets—particularly in classification tasks where one class is significantly underrepresented compared to the others—it generates synthetic samples for the minority class by interpolating between existing minority class instances. This approach adds variability with the additional synthetic data.
+
+### Conclusion
+The original data exhibits imbalance in its class distribution, leading to inaccurate precision in classifying each category (resulting in false positives). To address this, the was balanced using both upsampling downsampling, and SMOTE techniques. SMOTE had the best score with any model evaluated. 
+The model that achieved the best accuracy score, recall, precision, and F1 Random Forest model implemented on balanced data with SMOTE performed the best in predicting classes. However, accurately predicting Class 1 remained the most challenging aspect for all the models, including Random Forest with SMOTE.
+
+
+
