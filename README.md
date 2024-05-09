@@ -46,11 +46,24 @@ One dataset was collected from UC Irvine. Exploratory analysis was performed, cr
 The data was balanced using upsampling, downsampling, and SMOTE. KNN, Logistic Regression, Random Forest, and AdaBoost were evaluated to train this data in combination with different scalers (MinMax, Standard, and Robust). 
 Metrics such as Accuracy Score, F1, Precision, Recall, and Learning Curve were estimated.
 
-### Limitations and Future Research
-The level of data imbalance can potentially negatively affect the evaluation metrics used to assess a model's performance. Even when the data has been balanced using SMOTE (Synthetic Minority Over-sampling Technique), which aims to address imbalanced datasets—particularly in classification tasks where one class is significantly underrepresented compared to the others—it generates synthetic samples for the minority class by interpolating between existing minority class instances. This approach adds variability with the additional synthetic data.
+### Limitations
+The level of data imbalance can potentially negatively affect the evaluation metrics used to assess a model's performance. Even when the data has been balanced using SMOTE (Synthetic Minority Over-sampling Technique), which adds variability with the additional synthetic data. Predicting Class 1 accurately remained the most challenging aspect for all the models, even for Random Forest with SMOTE.
+
+### Future Research
+a. Feature engineering:
+- Select the most discriminative features for this classification task.
+
+b. Balance Data
+- Weight Class with class_weight parameter
+
+c. Models
+- XGBoost
+- Neuronal Networks
+- Balanced Random Forest
+
 
 ### Conclusion
-The original data exhibits imbalance in its class distribution, leading to inaccurate precision in classifying each category (resulting in false positives). To address this, the was balanced using both upsampling downsampling, and SMOTE techniques. SMOTE had the best score with any model evaluated. 
+The original data exhibits imbalance in its class distribution, leading to inaccurate precision in classifying each category (resulting in false positives). To address this, they were balanced using both upsampling downsampling, and SMOTE techniques. SMOTE had the best score with any model evaluated. 
 The model that achieved the best accuracy score, recall, precision, and F1 Random Forest model implemented on balanced data with SMOTE performed the best in predicting classes. However, accurately predicting Class 1 remained the most challenging aspect for all the models, including Random Forest with SMOTE.
 
 
