@@ -1,4 +1,4 @@
-# wine
+# Wine Quality Classification
 Evaluating different model predictions for wine quality classification.
 
 ### Overview 
